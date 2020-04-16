@@ -237,7 +237,7 @@ klines是一个pandas.DataFrame对象. 跟 api.get_quote() 一样, api.get_kline
 
 实盘交易
 -------------------------------------------------
-要让策略程序在实盘账号运行, 请在创建TqApi时传入一个 :py:class:`~tqsdk.api.TqAccount` , 填入 期货公司, 账号, 密码 (使用前请先 import TqAccount)::
+要让策略程序在实盘账号运行, 请在创建TqApi时传入一个 :py:class:`~tqsdk.account.TqAccount` , 填入 期货公司, 账号, 密码 (使用前请先 import TqAccount)::
 
   api = TqApi(TqAccount("H海通期货", "412432343", "123456"))
 
