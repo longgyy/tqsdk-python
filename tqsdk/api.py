@@ -16,9 +16,7 @@
 __author__ = 'chengzhi'
 
 import asyncio
-import base64
 import copy
-import ctypes
 import functools
 import json
 import logging
@@ -39,8 +37,8 @@ import requests
 import websockets
 
 from tqsdk.account import TqAccount
-from tqsdk.channel import TqChan
 from tqsdk.backtest import TqBacktest, TqReplay
+from tqsdk.channel import TqChan
 from tqsdk.objs import Entity, Quote, Kline, Tick, Account, Position, Order, Trade
 from tqsdk.sim import TqSim
 from tqsdk.tqwebhelper import TqWebHelper
@@ -1867,7 +1865,6 @@ class TqApi(object):
                 else:
                     dv = copy.copy(default)
                 dv._instance_entity(d["_path"] + [path[i]])
-
                 d[path[i]] = dv
             d = d[path[i]]
         return d
